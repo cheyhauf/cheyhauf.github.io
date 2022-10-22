@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --fill-color: rgb(161, 201, 207);
+        --nav-color: rgb(184, 198, 209);
+        --text-color: rgb(255 255 255);
+        --icon-bg: rgb(129, 139, 148);
+        --icon-content: rgb(122, 192, 255);
+        --title-gradient-one: rgb(100, 162, 217);
+        --title-gradient-two: rgb(86, 138, 184);
+    }
+    
+    .theme-dark {
+        --fill-color: rgb(71 85 105);
+        --nav-color: rgb(42, 40, 46);
+        --text-color: rgb(255 255 255);
+        --icon-bg: rgb(75 85 99);
+        --icon-content: rgb(168 85 247);
+        --title-gradient-one: rgb(168 85 247);
+        --title-gradient-two: rgb(71 85 105);
+    }
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+    
+    .sidebar-icon {
+        @apply relative flex items-center justify-center
+               h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+               bg-skin-iconBg text-skin-iconBase
+               hover:bg-skin-iconActive hover:text-skin-base
+               rounded-3xl hover:rounded-xl
+               transition-all duration-300 ease-linear;
+    }
+    .sidebar-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-14 bottom-0
+        rounded-md shadow-md
+        text-skin-base bg-skin-iconActive
+        text-xs font-bold
+        transition-all duration-100 scale-0 origin-left;
+    }
+
+    @media (hover: none) {
+        .sidebar-icon {
+            color: #fff;
+        }
+    }
 }
