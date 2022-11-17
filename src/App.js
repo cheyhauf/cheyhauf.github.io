@@ -14,21 +14,14 @@ import React from 'react';
 
 function App() {
 
-  const [theme, setTheme] = useLocalStorage("theme-type", "");
-
-  const themeToggle = (themeName) => {
-    setTheme(themeName);
-  }
-
+  const [theme] = useLocalStorage("theme-type");
 
   return (
     <>
-    <div className={theme}>
+      <div className={theme} id="themeProvider">
       <BrowserRouter>
         <SideBar />
         <NavTitle />
-        <div className="pl-16 cursor-pointer" onClick={() => themeToggle("")}>Toggle Light Theme</div>
-        <div className="pl-16 cursor-pointer" onClick={() => themeToggle("theme-dark")}>Toggle Dark Theme</div>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Themes' element={<Themes />} />

@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import { RiLinksFill } from 'react-icons/ri';
 import { FaLaptopCode } from 'react-icons/fa';
 import { BsClipboardData } from 'react-icons/bs';
-import { AiOutlineCoffee } from 'react-icons/ai';
 import { HiColorSwatch } from 'react-icons/hi';
-
+import { GiStripedSun } from 'react-icons/gi';
 
 const SideBar = () => {
 
@@ -16,7 +15,7 @@ const SideBar = () => {
           <SideBarIcon link="/Links" text="Quick Links" icon={<RiLinksFill size="28" />}></SideBarIcon>
           <SideBarIcon link="/Software" text="Software" icon={<FaLaptopCode size="28" />} />
           <SideBarIcon link="/Data" text="Data" icon={<BsClipboardData size="28" />} />
-          <SideBarIcon link="/FranksDrank" text="Frank's Drank" icon={<AiOutlineCoffee size="28" />} />
+          <SideBarIcon link="/FranksDrank" text="Frank's Drank" icon={<GiStripedSun size="28" />} />
           <SideBarIcon link="/Themes" text="Themes" icon={<HiColorSwatch size="28" />} />
         </div>
     </>       

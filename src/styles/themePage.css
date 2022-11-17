@@ -1,0 +1,173 @@
+/* 
+
+
+Default Theme Card
+
+
+*/
+.flip-card-default {
+    background-color: transparent;
+    width: 250px;
+    height: 500px;
+    perspective: 1000px;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+/* This container is needed to position the front and back side */
+.flip-card-default-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-default:hover .flip-card-default-inner {
+    transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip-card-default-front,
+.flip-card-default-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+/* Style the front side (fallback if image is missing) */
+.flip-card-default-front {
+    background-color: rgb(75 85 99);
+    color: black;
+    border-radius: 2rem;
+    border: 1px solid rgb(42, 40, 46);
+}
+/* Style the back side */
+.flip-card-default-back {
+    background-color: rgb(75 85 99);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 2rem;
+    border: 1px solid rgb(42, 40, 46);
+}
+
+.flip-card-default-themeSVG {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    border-radius: 2rem;
+}
+
+.flip-card-default-themeSVG svg {
+    position: relative;
+    display: block;
+    width: calc(193% + 1.3px);
+    height: 146px;
+    border-radius: 2rem;
+}
+
+.flip-card-default-themeSVG .shape-fill {
+    fill: rgb(122, 192, 255);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .flip-card-default-themeSVG svg {
+        width: calc(100% + 1.3px);
+        height: 95px;
+    }
+}
+/* 
+
+
+    Dark Theme Card
+
+
+*/
+.flip-card-dark {
+    background-color: transparent;
+    width: 250px;
+    height: 500px;
+    perspective: 1000px;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-dark-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-dark:hover .flip-card-dark-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-dark-front,
+.flip-card-dark-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-dark-front {
+    background-color: rgb(75 85 99);
+    color: black;
+    border-radius: 2rem;
+    border: 1px solid rgb(42, 40, 46);
+}
+
+/* Style the back side */
+.flip-card-dark-back {
+    background-color: rgb(75 85 99);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 2rem;
+    border: 1px solid rgb(42, 40, 46);
+}
+
+.flip-card-dark-themeSVG {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    border-radius: 2rem;
+}
+
+.flip-card-dark-themeSVG svg {
+    position: relative;
+    display: block;
+    width: calc(193% + 1.3px);
+    height: 146px;
+    border-radius: 2rem;
+}
+
+.flip-card-dark-themeSVG .shape-fill {
+    fill: rgb(168, 85, 247);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .flip-card-dark-themeSVG svg {
+        width: calc(100% + 1.3px);
+        height: 95px;
+    }
+}
