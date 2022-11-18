@@ -11,5 +11,4 @@ const useLocalStorage = (storageKey, fallbackState) => {
 
     return [value, setValue];
 }
-
 export default useLocalStorage;

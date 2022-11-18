@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+    :root{
+        --fill-color: rgb(161, 201, 207);
+        --nav-color: rgb(184, 198, 209);
+        --text-color: rgb(255 255 255);
+        --icon-bg: rgb(129, 139, 148);
+        --icon-content: rgb(122, 192, 255);
+        --title-gradient-one: rgb(100, 162, 217);
+        --title-gradient-two: rgb(86, 138, 184);
+    }
     .theme-default {
         --fill-color: rgb(161, 201, 207);
         --nav-color: rgb(184, 198, 209);
