@@ -8,7 +8,7 @@ const Themes = () => {
 
     return (
         <div className="ml-16 bg-skin-fill h-screen flex">
-          <h1>I am the Theme page</h1>
+          <h1 className='text-white'>I am the Theme page</h1>
             <ThemeCards className="flip-card-default" themeName="Default Theme" themeID="theme-default"/>
             <ThemeCards className="flip-card-dark" themeName="Dark Theme" themeID="theme-dark" />
         </div>      

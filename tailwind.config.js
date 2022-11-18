@@ -22,6 +22,7 @@ module.exports = {
         skin: {
           titleGradientOne: "var(--title-gradient-one)",
           titleGradientTwo: "var(--title-gradient-two)",
+          iconActive: "var(--icon-content)",
         },
       },
     },

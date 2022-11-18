@@ -39,7 +39,7 @@ Default Theme Card
 /* Style the front side (fallback if image is missing) */
 .flip-card-default-front {
     background-color: rgb(75 85 99);
-    color: black;
+    color: white;
     border-radius: 2rem;
     border: 1px solid rgb(42, 40, 46);
 }
@@ -127,7 +127,7 @@ Default Theme Card
 /* Style the front side (fallback if image is missing) */
 .flip-card-dark-front {
     background-color: rgb(75 85 99);
-    color: black;
+    color: white;
     border-radius: 2rem;
     border: 1px solid rgb(42, 40, 46);
 }
