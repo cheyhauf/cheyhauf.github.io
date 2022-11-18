@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { SetThemeContext } from '../App.js';
 import '../styles/themePage.css';
-
+import letThereBeLight from '../Utils/letThereBeLight';
 
 const Themes = () => {
     
@@ -20,10 +20,19 @@ const ThemeCards = ( props ) => {
 
     const setTheme = useContext(SetThemeContext);
     const themeToggle = () => {
-        setTheme(props.themeID);
-        document.getElementById("themeProvider").className = props.themeID;
-    };
+        if (props.themeID === "theme-default") {
+            setTheme(props.themeID);
+            document.getElementById("themeProvider").className = props.themeID;
+            console.clear();
+            letThereBeLight( "theme-default" );
 
+        } else if (props.themeID === "theme-dark") {
+            setTheme(props.themeID);
+            document.getElementById("themeProvider").className = props.themeID;
+            console.clear();
+            letThereBeLight( "theme-dark" );
+        }
+    };
 
     return (
         <div className={props.className}>
